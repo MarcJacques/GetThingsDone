@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds) // resizes windows to fit your screen
         window?.windowScene = windowScene
-        window?.rootViewController = navigationController
+        window?.rootViewController = CustomTabBarController()
         window?.makeKeyAndVisible()
     }
 

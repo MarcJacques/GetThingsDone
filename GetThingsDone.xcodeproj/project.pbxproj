@@ -12,6 +12,7 @@
 		05B40AD626C983B100078230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B40AD526C983B100078230 /* Assets.xcassets */; };
 		05B40AD926C983B100078230 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B40AD726C983B100078230 /* LaunchScreen.storyboard */; };
 		05B40AE426C984D900078230 /* ActivityTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B40AE326C984D900078230 /* ActivityTableVC.swift */; };
+		05B40AEA26C9998E00078230 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B40AE926C9998E00078230 /* CustomTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		05B40AD826C983B100078230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05B40ADA26C983B100078230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05B40AE326C984D900078230 /* ActivityTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableVC.swift; sourceTree = "<group>"; };
+		05B40AE926C9998E00078230 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		05B40ACB26C983B000078230 /* GetThingsDone */ = {
 			isa = PBXGroup;
 			children = (
+				05B40AE926C9998E00078230 /* CustomTabBarController.swift */,
 				05B40AE226C9844E00078230 /* Model */,
 				05B40AE526C9878400078230 /* Model Controller */,
 				05B40AE026C9843A00078230 /* Views */,
@@ -175,6 +178,7 @@
 			files = (
 				05B40ACD26C983B000078230 /* AppDelegate.swift in Sources */,
 				05B40ACF26C983B000078230 /* SceneDelegate.swift in Sources */,
+				05B40AEA26C9998E00078230 /* CustomTabBarController.swift in Sources */,
 				05B40AE426C984D900078230 /* ActivityTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
