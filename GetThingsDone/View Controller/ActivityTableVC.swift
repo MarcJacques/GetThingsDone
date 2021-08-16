@@ -26,11 +26,30 @@ class ActivityTableVC: UIViewController {
         
     }
     
-    func configureTableView() {
+    private func configureTableView() {
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+        
+        addButton()
+    }
+    
+    private func addButton() {
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"),
+                                        style: .plain,
+                                        target: self,
+                                        action: #selector(addActivity)
+        )
+        
+        self.navigationItem.rightBarButtonItem = addButton
+    }
+    
+   
+    @objc func addActivity() {
+        let addActivityVC = AddActivityVC()
+        navigationController?.pushViewController(addActivityVC, animated: true)
+        
     }
     
 }

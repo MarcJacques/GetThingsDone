@@ -15,6 +15,10 @@ class AddActivityVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    private func updateView() {
+        navigationItem.title = "Add Activity"
+        view.backgroundColor = .white
+    }
 
     /*
     // MARK: - Navigation
