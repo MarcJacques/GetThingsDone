@@ -10,7 +10,7 @@ import UIKit
 class ActivityTableVC: UIViewController {
     
     let tableView = UITableView()
-    var activities = ["work", "chores", "study", "bills"]
+    var activities = [Activity]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ extension ActivityTableVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath)
 
         
-        cell.textLabel?.text = activities[indexPath.row]
+        cell.textLabel?.text = activities[indexPath.row].name
         return cell
     }
     

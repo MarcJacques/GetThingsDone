@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05644CB126CA864700955B03 /* ActivityDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05644CB026CA864700955B03 /* ActivityDetailVC.swift */; };
+		05644CB326CA8E1F00955B03 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05644CB226CA8E1F00955B03 /* Activity.swift */; };
+		05644CB526CA8EE300955B03 /* AddActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05644CB426CA8EE300955B03 /* AddActivityVC.swift */; };
 		05B40ACD26C983B000078230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B40ACC26C983B000078230 /* AppDelegate.swift */; };
 		05B40ACF26C983B000078230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B40ACE26C983B000078230 /* SceneDelegate.swift */; };
 		05B40AD626C983B100078230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B40AD526C983B100078230 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05644CB026CA864700955B03 /* ActivityDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailVC.swift; sourceTree = "<group>"; };
+		05644CB226CA8E1F00955B03 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		05644CB426CA8EE300955B03 /* AddActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityVC.swift; sourceTree = "<group>"; };
 		05B40AC926C983B000078230 /* GetThingsDone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetThingsDone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B40ACC26C983B000078230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05B40ACE26C983B000078230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 		05B40AE026C9843A00078230 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				05644CB026CA864700955B03 /* ActivityDetailVC.swift */,
+				05644CB426CA8EE300955B03 /* AddActivityVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +93,7 @@
 		05B40AE226C9844E00078230 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				05644CB226CA8E1F00955B03 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,8 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05644CB326CA8E1F00955B03 /* Activity.swift in Sources */,
 				05B40ACD26C983B000078230 /* AppDelegate.swift in Sources */,
+				05644CB526CA8EE300955B03 /* AddActivityVC.swift in Sources */,
 				05B40ACF26C983B000078230 /* SceneDelegate.swift in Sources */,
+				05644CB126CA864700955B03 /* ActivityDetailVC.swift in Sources */,
 				05B40AEA26C9998E00078230 /* CustomTabBarController.swift in Sources */,
 				05B40AE426C984D900078230 /* ActivityTableVC.swift in Sources */,
 			);
