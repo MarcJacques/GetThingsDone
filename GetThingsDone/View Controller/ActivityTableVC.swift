@@ -54,6 +54,12 @@ extension ActivityTableVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("cell tapped")
+        
+        
+        let activityDetailVC = ActivityDetailVC()
+        activityDetailVC.activity = activities[indexPath.row]
+        
+        navigationController?.pushViewController(activityDetailVC, animated: true)
     }
     
     
