@@ -45,6 +45,8 @@ class AddActivityVC: UIViewController {
         stopTimeLabel.textAlignment = .right
         reminderIntervalsLabel.textAlignment = .right
         
+        #warning("is text alignment necessary? shouldn't it be left? ")
+        
         setupLabels()
         
         setupTextFields()
