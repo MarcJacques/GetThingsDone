@@ -23,6 +23,34 @@ class AddActivityVC: UIViewController {
     override func loadView() {
         view = UIView()
         view.backgroundColor = .white
+        
+        activityLabel               = UILabel()
+        startTimeLabel              = UILabel()
+        stopTimeLabel               = UILabel()
+        reminderIntervalsLabel      = UILabel()
+        
+        activityTextField           = UITextField()
+        startTimeTextField          = UITextField()
+        stopTimeTextField           = UITextField()
+        reminderIntervalsTextField  = UITextField()
+        
+        
+        activityLabel.translatesAutoresizingMaskIntoConstraints = false
+        startTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+        stopTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+        reminderIntervalsLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        activityLabel.textAlignment = .right
+        startTimeLabel.textAlignment = .right
+        stopTimeLabel.textAlignment = .right
+        reminderIntervalsLabel.textAlignment = .right
+        
+        setupLabels()
+        
+        setupTextFields()
+        
+        
+        
     }
     
     
@@ -35,13 +63,63 @@ class AddActivityVC: UIViewController {
     private func updateView() {
         navigationItem.title = "Add Activity"
         view.backgroundColor = .white
+        setupLabels()
+        setupTextFields()
+    }
+    
+    private func setupLabels() {
         
+        let allLabels = [activityLabel, startTimeLabel, stopTimeLabel, reminderIntervalsLabel]
+        for label in allLabels {
+            if let label = label {
+                label.translatesAutoresizingMaskIntoConstraints = false
+                label.textAlignment = .right
+                self.view.addSubview(label)
+            }
+        }
+        
+        activityLabel.text = "Activity:"
+        startTimeLabel.text = "Start Time:"
+        stopTimeLabel.text = "Stop Time:"
+        reminderIntervalsLabel.text = "Reminder Intervals:"
+        
+        
+        
+        NSLayoutConstraint.activate([
+            activityLabel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            activityLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            
+            startTimeLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: activityLabel.bottomAnchor, multiplier: 0),
+            startTimeLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            
+            stopTimeLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: startTimeLabel.bottomAnchor, multiplier: 0),
+            stopTimeLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            
+            reminderIntervalsLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: stopTimeLabel.bottomAnchor, multiplier: 0),
+            reminderIntervalsLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor)
+        ])
         
     }
     
-    private func setupTextField() {
+    private func setupTextFields() {
         
         let allTextFields = [activityTextField, startTimeTextField, stopTimeTextField, reminderIntervalsTextField]
+        
+        for textfield in allTextFields {
+            
+            // Set UITextField border style
+            if let textfield = textfield {
+                
+                
+                textfield.textAlignment = .right
+                textfield.borderStyle = UITextField.BorderStyle.line
+                
+                // Add UITextField as a subview
+                self.view.addSubview(textfield)
+            }
+            
+            
+        }
         
         // Set UITextField placeholder text
         activityTextField.placeholder = "Name of activity"
@@ -49,17 +127,21 @@ class AddActivityVC: UIViewController {
         stopTimeTextField.placeholder = "Time to end activity"
         reminderIntervalsTextField.placeholder = "Reminders"
         
-        for textfield in allTextFields {
+        NSLayoutConstraint.activate([
             
-            // Set UITextField border style
-            if let textfield = textfield {
+            activityTextField.leadingAnchor.constraint(equalToSystemSpacingAfter: activityLabel.trailingAnchor, multiplier: 0),
+            activityTextField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
             
-                textfield.borderStyle = UITextField.BorderStyle.line
-                
-                // Add UITextField as a subview
-                self.view.addSubview(textfield)
-            }
-        }
+            startTimeTextField.leadingAnchor.constraint(equalToSystemSpacingAfter: startTimeLabel.trailingAnchor, multiplier: 0),
+            startTimeTextField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            
+            stopTimeTextField.leadingAnchor.constraint(equalToSystemSpacingAfter: stopTimeLabel.trailingAnchor, multiplier: 0),
+            stopTimeTextField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            
+            reminderIntervalsTextField.leadingAnchor.constraint(equalToSystemSpacingAfter: reminderIntervalsLabel.trailingAnchor, multiplier: 0),
+            reminderIntervalsTextField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor)
+        ])
+        
     }
     /*
      // MARK: - Navigation
