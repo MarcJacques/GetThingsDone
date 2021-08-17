@@ -9,9 +9,9 @@ import UIKit
 
 class ActivityDetailVC: UIViewController {
     
-    @IBOutlet weak var startTimeLabel : UILabel!
-    @IBOutlet weak var stopTimeLabel  : UILabel!
-    @IBOutlet weak var reminderLabel  : UILabel!
+    var startTimeLabel : UILabel!
+    var stopTimeLabel  : UILabel!
+    var reminderLabel  : UILabel!
     
     var activity: Activity?
     

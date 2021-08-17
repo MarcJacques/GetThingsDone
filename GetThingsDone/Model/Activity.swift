@@ -13,3 +13,6 @@ struct Activity {
     var stop: String
     var reminderIntervals: Int
 }
+
+//just thought about this: maybe we don't need to track the reminder label. Maybe we can make it a computed property derived from start and stop time data.
+//also should we be collecting location data?
