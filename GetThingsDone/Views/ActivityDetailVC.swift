@@ -15,6 +15,11 @@ class ActivityDetailVC: UIViewController {
     
     var activity: Activity?
     
+    override func loadView() {
+        view = UIView()
+        view.backgroundColor = .white
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
