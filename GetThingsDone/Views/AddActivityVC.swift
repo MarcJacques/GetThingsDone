@@ -45,7 +45,13 @@ class AddActivityVC: UIViewController {
         stopTimeLabel.textAlignment = .right
         reminderIntervalsLabel.textAlignment = .right
         
-        #warning("is text alignment necessary? shouldn't it be left? ")
+        #warning("""
+            1. is text alignment necessary?
+            2. shouldn't it be left alignment?
+            3. find which UILabel is not properly constrained? use breakpoints and comment out code
+            4. how can you constrain a label to a textfield programmatically?
+            5. what is necessary to get a textfield up and constrained programmtically?
+            """)
         
         setupLabels()
         
@@ -66,7 +72,7 @@ class AddActivityVC: UIViewController {
         navigationItem.title = "Add Activity"
         view.backgroundColor = .white
         setupLabels()
-        setupTextFields()
+//        setupTextFields()
     }
     
     private func setupLabels() {
@@ -113,7 +119,7 @@ class AddActivityVC: UIViewController {
             if let textfield = textfield {
                 
                 
-                textfield.textAlignment = .right
+                textfield.textAlignment = .center
                 textfield.borderStyle = UITextField.BorderStyle.line
                 
                 // Add UITextField as a subview
